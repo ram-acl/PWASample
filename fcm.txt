@@ -1,0 +1,51 @@
+Header : (Bulk edit)
+Authorization:key=AAAA9i76Yf0:APA91bFbbCxfBzXqGgMJGjMKWD_x5WlvIQNuKzQ2_xtNUGmoNP7bXenTNdsAwKupb9SIgedctDjarDIEaXZuIwzH4EzpTep0WQFEbiaE7F4odp-2IYnp2oNt_C2Lf2v30LE4gAStLteh
+Content-Type:application/json
+
+
+Get Subscribed list for the token [Get]
+----------------------------------------
+https://iid.googleapis.com/iid/info/Token?details=true
+
+
+Post Message to indidual token [Get]
+------------------------------------
+https://fcm.googleapis.com/fcm/send
+Body
+single push
+{
+ "to": "d_F2R_woeRg:APA91bFiM2GRB6i8cjUZVFGuvcvFxjDm0SKyQTHCBLNzn1yK9wRTbmy23NPxiXrJuPfc_V0yr3CKkRtPTFYFokvR2cKElY0UPZqDjqHIgkwhU-PsmJQwlYJwXAaPnnUQA-knYresjYOY",
+ "notification": {
+  "body": "This is thetest body for the Push messages",
+  "title": "Hello World!",
+  "sound": "default",
+  "click_action": "http://google.in",
+  "icon": "assets/img/PWA-logo.jpg"
+  }
+}
+array of token
+{
+ "registration_ids": "[token1,token2]",
+ "notification": {
+  "body": "This is thetest body for the Push messages",
+  "title": "Hello World!",
+  "sound": "default",
+  "click_action": "http://google.in",
+  "icon": "assets/img/PWA-logo.jpg"
+ }
+}
+to topic push
+{
+ "to": "/topics/all",
+ "notification": {
+  "body": "This is thetest body for the Push messages",
+  "title": "Hello World!",
+  "sound": "default",
+  "click_action": "http://google.in",
+  "icon": "assets/img/PWA-logo.jpg"
+ }
+}
+
+To Subscripe to Topic [Post]
+----------------------------
+https://iid.googleapis.com/iid/v1/token/rel/topics/all
