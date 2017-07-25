@@ -45,7 +45,7 @@
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <button aria-label="Menu" type="button" name="toggle1" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -65,9 +65,9 @@
 		<div class="container">
             <div class="row centered">
                 <div>
-                <button type="button" class="btn btn-secondary btn-lg" id="subBtn" data-target="#QRModal" data-toggle="modal">Show QR Code</button>
-                    <button type="button" class="btn btn-warning btn-lg" id="regisfcm" data-target="#exampleModal">Register to FCM</button>
-                    <button type="submit" class="btn btn-warning btn-lg" id="subBtn" onclick="subscribe()">Subscribe Topic</button>
+                <button aria-label="Show QR Code" type="button" name="qrBtn" class="btn btn-secondary btn-lg" id="qrBtn" data-target="#QRModal" data-toggle="modal">Show QR Code</button>
+                    <button aria-label="Register for Firebase Cloud Messaging" type="button" name="regFCMBtn" class="btn btn-warning btn-lg" id="regisfcm" data-target="#exampleModal">Register to FCM</button>
+                    <button aria-label="Subscribe for a Topic" type="submit" name="subBtn" class="btn btn-warning btn-lg" id="subBtn" onclick="subscribe()">Subscribe Topic</button>
                     <span id="headerButton"></span>
                   </div>
             </div>
@@ -113,7 +113,7 @@
 	<div class="container">
 		<hr>
 		<div class="row centered">
-			<button type="submit" class="btn btn-warning btn-lg"><a href="https://developers.google.com/web/progressive-web-apps/">Know more about PWA</a></button>		
+			<button aria-label="Know more about PWA" type="submit" name="knowmore" class="btn btn-warning btn-lg"><a href="https://developers.google.com/web/progressive-web-apps/">Know more about PWA</a></button>		
 		</div><!-- /row -->
 		<hr>
 	</div><!-- /container -->
@@ -145,7 +145,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Welcome to PWA Demo!</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button aria-label="Close This" aria-labelledby="exampleModal" type="button" name="modalclose1" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -158,7 +158,7 @@
                 </form>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal" id="FCMNotification">Save </button>
+                <button aria-label="Save Name" aria-labelledby="exampleModal" type="button" name="saveBtn" class="btn btn-primary" data-dismiss="modal" id="FCMNotification">Save </button>
               </div>
             </div>
           </div>
@@ -170,13 +170,13 @@
     <div class="modal-content" >
       <div class="modal-header">
           <h5 class="modal-title" id="QRModalLabel">Scan this QR to Check PWA Demo on your Android</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <button aria-label="Close QR" aria-labelledby="QRModal" type="button" name="modalclose2" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
       <div class="modal-body">
         <div>
-          <a href="http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fpwademo-ff008.firebaseapp.com%2F&qzone=1&margin=0&size=850x850&ecc=L" target="_blank"><img src="http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fpwademo-ff008.firebaseapp.com%2F&qzone=1&margin=0&size=550x550&ecc=L" /></a>
+          <a href="https://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fpwademo-ff008.firebaseapp.com%2F&qzone=1&margin=0&size=850x850&ecc=L" rel="noopener" target="_blank"><img src="https://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fpwademo-ff008.firebaseapp.com%2F&qzone=1&margin=0&size=550x550&ecc=L" /></a>
 
         </div>
       </div>
@@ -208,7 +208,7 @@
             firebase.initializeApp(config);
       </script>
 
-    <script src="assets/js/app.js?_=25"></script>
+    <script src="assets/js/app.js"></script>
     <script>
       if('serviceWorker' in navigator) {
         navigator.serviceWorker

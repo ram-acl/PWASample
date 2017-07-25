@@ -2,16 +2,16 @@ console.log('Service Worker Started', self);
 
 var cacheName = 'pwaCache';
 var filesToCache = [
-  './',
-  './index.html',
-  './assets/css/main.css',
-  './assets/css/bootstrap.css',
-  './assets/img/ipad-hand.png',
-  './assets/img/PWA-logo.jpg',
-  './assets/js/app.js',
-  './assets/js/bootstrap.min.js',
-  './assets/js/hardwares.js',
-  './assets/js/notifications.js'
+  '/',
+  '/index.html',
+  '/assets/css/main.css',
+  '/assets/css/bootstrap.css',
+  '/assets/img/ipad-hand.png',
+  '/assets/img/PWA-logo.jpg',
+  '/assets/js/app.js',
+  '/assets/js/bootstrap.min.js',
+  '/assets/js/hardwares.js',
+  '/assets/js/notifications.js'
 ];
 
 self.addEventListener('install', function (event) {
